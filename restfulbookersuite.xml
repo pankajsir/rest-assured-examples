@@ -3,11 +3,11 @@
 <suite name="Restful Booker Test Suite">
     <listeners>
         <listener
-                class-name="io.github.mfaisalkhatri.TestListener"/>
+                class-name="io.github.mfaisalkhatri.helper.TestListener"/>
     </listeners>
     <test name="Restful Booker tests">
         <classes>
-            <class name="com.restfulbooker.RestfulBookerE2ETests">
+            <class name="com.restfulbooker.tests.RestfulBookerE2ETests">
                 <methods>
                     <include name="createBookingTest"/>
                     <include name="getBookingTest"/>

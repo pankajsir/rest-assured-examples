@@ -1,13 +1,13 @@
-package com.restfulbooker;
+package com.restfulbooker.tests;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
+import com.restfulbooker.data.*;
+
 import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import data.*;
 
 /**
  * Created By Faisal Khatri on 18-02-2022

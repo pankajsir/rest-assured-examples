@@ -13,10 +13,11 @@
         limitations under the License.
 */
 
-package io.github.mfaisalkhatri;
+package io.github.mfaisalkhatri.restapi;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.notNullValue;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,49 +32,50 @@ import org.testng.annotations.Test;
 /**
  * Created By Faisal Khatri on 20-11-2021
  */
-public class TestPutRequests {
+public class TestPostRequests {
 
-    Logger                      log = LogManager.getLogger (TestPutRequests.class);
+    Logger                      log = LogManager.getLogger (TestPostRequests.class);
     private static final String URL = "https://reqres.in";
+
+    /**
+     * @since Mar 7, 2020
+     * @return postData
+     */
+    @DataProvider (name = "postData")
+    public Iterator<Object []> postData () {
+        final List<Object []> postData = new ArrayList<> ();
+        postData.add (new Object [] { "Rahul", "QA" });
+        postData.add (new Object [] { "Jane", "Sr.Dev" });
+        postData.add (new Object [] { "Albert", "Dev" });
+        postData.add (new Object [] { "Johnny", "Project Manager" });
+        return postData.iterator ();
+    }
 
     /**
      * Created By Faisal Khatri on 20-11-2021
      *
-     * @return test data for put requests
-     */
-    @DataProvider (name = "putData")
-    public Iterator<Object []> putData () {
-        final List<Object []> putData = new ArrayList<> ();
-        putData.add (new Object [] { 2, "Michael", "QA Lead" });
-        putData.add (new Object [] { 958, "Yuan", "Project Architect" });
-        return putData.iterator ();
-    }
-
-    /**
-     * Created By Faisal Khatri on 20-11-2021 Executing Put Request using Rest
-     * Assured.
-     *
-     * @param id
      * @param name
      * @param job
      */
-    @Test (dataProvider = "putData")
-    public void putRequestsTests (final int id, final String name, final String job) {
-
+    @Test (dataProvider = "postData")
+    public void testPostRequests (final String name, final String job) {
         final PostData postData = new PostData (name, job);
         final String response = given ().contentType (ContentType.JSON)
             .body (postData)
             .when ()
-            .put (URL + "/api/users/" + id)
+            .post (URL + "/api/users")
             .then ()
             .assertThat ()
-            .statusCode (200)
+            .statusCode (201)
             .and ()
             .assertThat ()
             .body ("name", equalTo (name))
             .and ()
             .assertThat ()
             .body ("job", equalTo (job))
+            .and ()
+            .assertThat ()
+            .body ("id", notNullValue ())
             .and ()
             .extract ()
             .response ()

@@ -13,7 +13,7 @@
         limitations under the License.
 */
 
-package io.github.mfaisalkhatri;
+package io.github.mfaisalkhatri.helper;
 
 import org.testng.ITestListener;
 import org.testng.ITestResult;

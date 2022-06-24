@@ -1,4 +1,4 @@
-package data;
+package com.restfulbooker.data;
 
 import com.github.javafaker.Faker;
 

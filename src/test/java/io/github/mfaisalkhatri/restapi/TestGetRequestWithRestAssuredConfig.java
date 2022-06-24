@@ -13,7 +13,7 @@
         limitations under the License.
 */
 
-package io.github.mfaisalkhatri;
+package io.github.mfaisalkhatri.restapi;
 
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;

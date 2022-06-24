@@ -3,11 +3,11 @@
 <suite name="ReqRes Test Suite">
     <listeners>
         <listener
-                class-name="io.github.mfaisalkhatri.TestListener"/>
+                class-name="io.github.mfaisalkhatri.helper.TestListener"/>
     </listeners>
     <test name="Authentication Tests">
         <classes>
-            <class name="io.github.mfaisalkhatri.TestAuthentication">
+            <class name="io.github.mfaisalkhatri.restapi.TestAuthentication">
                 <methods>
                     <include name="testAuthenticationToken"/>
                     <include name="testAuthToken"/>
@@ -17,7 +17,7 @@
     </test>
     <test name="Get Request Tests">
         <classes>
-            <class name="io.github.mfaisalkhatri.TestGetRequests">
+            <class name="io.github.mfaisalkhatri.restapi.TestGetRequests">
                 <methods>
                     <include name="getRequestTest"/>
                     <include name="getRequestTestWithQueryParam"/>
@@ -28,7 +28,7 @@
 
     <test name="Get Tests with Rest Assured Config">
         <classes>
-            <class name="io.github.mfaisalkhatri.TestGetRequestWithRestAssuredConfig">
+            <class name="io.github.mfaisalkhatri.restapi.TestGetRequestWithRestAssuredConfig">
                 <methods>
                     <include name="getRequestTestwithRestAssuredConfig"/>
                 </methods>
@@ -38,12 +38,12 @@
 
     <test name="Post Request tests">
         <classes>
-            <class name="io.github.mfaisalkhatri.TestPostRequests">
+            <class name="io.github.mfaisalkhatri.restapi.TestPostRequests">
                 <methods>
                     <include name="testPostRequests"/>
                 </methods>
             </class>
-            <class name="io.github.mfaisalkhatri.PostRequestBuilderExample">
+            <class name="io.github.mfaisalkhatri.restapi.PostRequestBuilderExample">
                 <methods>
                     <include name="postTestUsingBuilderPattern"/>
                 </methods>
@@ -53,7 +53,7 @@
 
     <test name="Put Request Tests">
         <classes>
-            <class name="io.github.mfaisalkhatri.TestPutRequests">
+            <class name="io.github.mfaisalkhatri.restapi.TestPutRequests">
                 <methods>
                     <include name="putRequestsTests"/>
                 </methods>
@@ -63,7 +63,7 @@
 
     <test name="Patch Request tests">
         <classes>
-            <class name="io.github.mfaisalkhatri.TestPatchRequests">
+            <class name="io.github.mfaisalkhatri.restapi.TestPatchRequests">
                 <methods>
                     <include name="patchRequestTests"/>
                 </methods>
@@ -73,7 +73,7 @@
 
     <test name="Delete Requests tests ">
         <classes>
-            <class name="io.github.mfaisalkhatri.TestDeleteRequests">
+            <class name="io.github.mfaisalkhatri.restapi.TestDeleteRequests">
                 <methods>
                     <include name="deleteRequestTests"/>
                 </methods>

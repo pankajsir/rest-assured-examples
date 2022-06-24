@@ -13,7 +13,7 @@
         limitations under the License.
 */
 
-package io.github.mfaisalkhatri;
+package io.github.mfaisalkhatri.restapi;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

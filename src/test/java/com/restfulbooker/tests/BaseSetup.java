@@ -1,4 +1,4 @@
-package com.restfulbooker;
+package com.restfulbooker.tests;
 
 import static org.hamcrest.Matchers.lessThan;
 

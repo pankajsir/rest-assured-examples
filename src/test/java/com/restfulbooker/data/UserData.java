@@ -13,28 +13,19 @@
         limitations under the License.
 */
 
-package io.github.mfaisalkhatri;
+package com.restfulbooker.data;
 
+import lombok.Builder;
 import lombok.Data;
 
 /**
- * Created By Faisal Khatri on 19-11-2021
+ * Created By Faisal Khatri on 20-11-2021
  */
 @Data
-public class AuthenticationPojo {
+@Builder
+public class UserData {
 
-    private String email;
-    private String password;
-
-    /**
-     * Created By Faisal Khatri on 19-11-2021
-     *
-     * @param email
-     * @param password
-     */
-    public AuthenticationPojo (String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
+    private String name;
+    private String job;
 
 }

@@ -13,19 +13,30 @@
         limitations under the License.
 */
 
-package data;
+package io.github.mfaisalkhatri.restapi;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
- * Created By Faisal Khatri on 20-11-2021
+ * Created By Faisal Khatri on 19-11-2021
  */
-@Data
-@Builder
-public class UserData {
+@Getter
+@Setter
+public class PostData {
 
-    private String name;
-    private String job;
+    private final String name;
+    private final String job;
 
+    /**
+     * Created By Faisal Khatri on 19-11-2021
+     *
+     * @param name
+     * @param job
+     */
+    public PostData (final String name, final String job) {
+        this.name = name;
+        this.job = job;
+
+    }
 }

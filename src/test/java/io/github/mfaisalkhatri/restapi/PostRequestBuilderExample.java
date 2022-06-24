@@ -13,13 +13,13 @@
         limitations under the License.
 */
 
-package io.github.mfaisalkhatri;
+package io.github.mfaisalkhatri.restapi;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 import com.github.javafaker.Faker;
-import data.UserData;
+import com.restfulbooker.data.UserData;
 import org.testng.annotations.Test;
 
 /**
